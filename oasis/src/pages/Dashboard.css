@@ -156,3 +156,13 @@
 .dash-icon{
     margin-right: 7px;
 }
+
+.cal{
+    /* margin: 2px; */
+    padding: 2px;
+    border: none !important;
+}
+
+.image-div{
+    margin-bottom: 15px;
+}
