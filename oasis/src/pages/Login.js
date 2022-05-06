@@ -91,7 +91,7 @@ function Login() {
 
                             <div className="hello">
                                 <h2>Hello Again!</h2>
-                                <h4>Welcome back you have been missed! </h4>
+                                <h4>Welcome back, you have been missed! </h4>
                             </div>
 
                             <form onSubmit={submitForm}>
