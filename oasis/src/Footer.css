@@ -1,5 +1,5 @@
 .footer-container {
-    height: 300px;
+    height: 200px;
     width: 100%;
     background-color: whitesmoke;
     color: black;
@@ -53,7 +53,7 @@
     padding:50px 0;
     color:white;
     background-color:#4b71f0;
-    height: 500px;
+    height: 200px;
   }
   
   .footer-dark h3 {
