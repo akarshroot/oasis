@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import './Login.css'
 
-function Login() {
+function Signup() {
     const navigate = useNavigate()
     const currentUser = false
     const initUserLoading = false
@@ -13,6 +13,7 @@ function Login() {
     }, [])
 
     const [inputs, setinputs] = useState({
+        name: "",
         email: "",
         password: ""
     });
@@ -39,16 +40,20 @@ function Login() {
             .then((data) => console.log(data));
     }
 
-    function handleLogin() {
+    const [loading, setLoading] = useState(false)
+
+    function handleSignup() {
+        setLoading(true)
         const userData = {
+            name: inputs.name,
             email: inputs.email,
             password: inputs.password
         }
-        fetch("/verify-user", userData)
+        fetch("/post-user", userData)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data)
-                navigate("/dashboard")
+                setLoading(false)
             });
     }
 
@@ -72,7 +77,7 @@ function Login() {
         e.preventDefault();
         setwarnemail(false);
         setwarnpass(false);
-        if (inputs.email.length < 1) { setdanger(false); return } if (inputs.email == "") { setwarnemail(true); return } else if (inputs.password == "") { setwarnpass(true); return } else { handleLogin() }
+        if (inputs.email.length < 1) { setdanger(false); return } if (inputs.email == "") { setwarnemail(true); return } else if (inputs.password == "") { setwarnpass(true); return } else { handleSignup() }
     }; const Eye = () => {
         if (pass == "password") {
             setpass("text");
@@ -91,16 +96,19 @@ function Login() {
                     <div className="form">
                         <div className="right-side">
                             <div className="register">
-                                <p>Not a member? <a href='/signup'>Register Now</a></p>
+                                <p>Already a member? <a href='/login'>Login Now</a></p>
                             </div>
 
                             <div className="hello">
-                                <h2>Hello Again!</h2>
-                                <h4>Welcome back, you have been missed! </h4>
+                                <h2>Hello!</h2>
+                                <h4>Welcome, make yourself at home.</h4>
                             </div>
 
                             <form onSubmit={submitForm}>
 
+                                <div className="input_text">
+                                    <input type="text" placeholder="Enter Name" name="name" value={inputs.name} onChange={inputEvent} />
+                                </div>
                                 <div className="input_text">
                                     <input className={` ${warnemail ? "warning" : ""}`} type="text" placeholder="Enter Email" name="email" value={inputs.email} onChange={inputEvent} />
                                     <p className={` ${danger ? "danger" : ""}`}><i className="fa fa-warning"></i>Please enter a valid email address.</p>
@@ -113,7 +121,7 @@ function Login() {
                                     <p>Recovery Password</p>
                                 </div>
                                 <div className="btn">
-                                    <button type="submit">Sign in</button>
+                                    <button type="submit" disabled={loading}>{loading ? "Loading...": "Sign Up"}</button>
                                 </div>
 
                             </form>
@@ -136,4 +144,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Signup
