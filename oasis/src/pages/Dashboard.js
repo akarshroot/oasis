@@ -15,10 +15,6 @@ function Dashboard() {
     <div className="dash-container">
 
       <div className="column left" style={{backgroundColor: "white"}}>
-        <div className="dash-tabs"><img src = {dashpic} className = 'dash-pic dashbpic'></img>Dashboard</div>
-        <div className="dash-tabs"><img src = {vacimg} className = 'dash-pic vacimg'></img>Vaccination History</div>
-        <div className="dash-tabs">Vaccination Due</div>
-        <div className="dash-tabs">COVID-19 Resources</div>
         <div className="dash-tabs"><FontAwesomeIcon icon={ faChartColumn } className="dash-icon"/>Dashboard</div>
         <div className="dash-tabs"><FontAwesomeIcon icon={ faFolderOpen } className="dash-icon"/>Health Status</div>
         <div className="dash-tabs"><FontAwesomeIcon icon={ faHouseMedicalCircleCheck } className="dash-icon"/>Vaccination History</div>
