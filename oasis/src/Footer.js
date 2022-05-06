@@ -22,13 +22,10 @@ function footer() {
                                 </ul>
                             </div>
                             <div className="item text main-item">
-                                <div className="title"></div>
-                                <p className="footer-about">Vednutri was incorporated in 2018, with an aim to manufacture supreme quality products without additional sweeteners, chemicals or additives.</p>
-                                <br /><br />
+                                <p className="footer-about">Oasis is a provider of advanced and user friendly virtual health care solution at your hands.</p>
+                                <br />
                                 <p className="copyright">
-                                    Vednutri © 2022
-                                    <br /><br />
-                                    <a className="footer-link" href="#">Terms of Service</a>
+                                    Oasis © 2022
                                 </p>
                             </div>
                             <div className="item">
@@ -40,11 +37,7 @@ function footer() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="item social">
-                            <a href="#" target="_blank" rel="noopener noreferrer"><img className="icon"></img></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer"><img className="icon"></img></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer"><img className="icon"></img></a>
-                        </div>
+                        
                     </div>
                 </footer>
             </div>
