@@ -42,7 +42,7 @@ function Dashboard() {
             Locate a nearby health center
           </div>
           <div className = 'heaStat'>
-            Check you health status
+            Check your health status
           </div>
         </div>
       
