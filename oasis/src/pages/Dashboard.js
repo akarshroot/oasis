@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import './Dashboard.css'
+import 'react-calendar/dist/Calendar.css';
+
 import dashpic from '../assets/dashPic.png'
 import vacimg from '../assets/vacimg.png'
 import userimg from '../assets/user.png'
@@ -9,8 +11,13 @@ import { faFolderOpen } from '@fortawesome/free-solid-svg-icons';
 import { faHouseMedicalCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faHouseCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { faMaskFace } from '@fortawesome/free-solid-svg-icons';
+import Calendar from 'react-calendar';
+
+
 
 function Dashboard() {
+  const [value, onChange] = useState(new Date());
+
   return (
     <div className="dash-container">
 
@@ -30,12 +37,12 @@ function Dashboard() {
         <div className = 'feel'>How are you feeling today?</div>
       </div>
 
-      <div className="column right" style={{backgroundColor:"#ccc"}}>
+      <div className="column right" style={{backgroundColor:"white"}}>
         <div>
-        <img src={userimg} alt="User image" className="user-img"></img> 
+          <img src={userimg} alt="User image" className="user-img"></img> 
         </div>
         <div>
-
+          <Calendar onChange={onChange} value={value} />
         </div>
       </div>
 
