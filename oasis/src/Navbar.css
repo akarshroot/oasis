@@ -18,6 +18,12 @@
     animation: drop-nav 800ms;
 }
 
+.logo-text{
+    font-family: 'Parisienne', cursive;
+    font-weight: normal !important;
+    margin-left: -20px;
+}
+
 @keyframes drop-nav {
     from {
         height: 0;
@@ -39,7 +45,8 @@
     /* background-color: #a40606; */
     color: white;
     justify-self: start;
-    margin: 20px;
+    margin-top: -5px;
+    /* margin-left: -50px; */
     cursor: pointer;
     text-decoration: none;
     font-size: 3rem;
@@ -49,7 +56,8 @@
 }
 
 .nav-logo {
-    width: 150px;
+    width: 120px;
+    height: 120px;
 }
 
 .fa-typo3 {

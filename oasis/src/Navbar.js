@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
+import logo from './assets/logo.svg'
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -27,17 +28,17 @@ function Navbar() {
             <nav className="navbar">
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        {/* <img src={Logo} alt="Logo" className="nav-logo"></img> */}
-                        
+                        <img src={logo} alt="Logo" className="nav-logo"></img> 
+                        <p className="logo-text">asis</p>
                     </Link>
                     <div className="menu-icon" onClick={handleClick}>
                         <i className={click ? "fa fa-times" : "fas fa-bars"}></i>
                     </div>
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item"><Link to="/" className="nav-links" onClick={closeMobileMenu}>Home</Link></li>
-                        <li className="nav-item"><Link to="/about" className="nav-links" onClick={closeMobileMenu}>About Us</Link></li>
-                        {/* <li className="nav-item"><Link to="/products" className="nav-links" onClick={closeMobileMenu}>Our Products</Link></li> */}
-                        <li className="nav-item"><Link to="/contact" className="nav-links" onClick={closeMobileMenu}>Contact Us</Link></li>
+                        <li className="nav-item"><Link to="/about" className="nav-links" onClick={closeMobileMenu}>FAQ</Link></li>
+                        <li className="nav-item"><Link to="/products" className="nav-links" onClick={closeMobileMenu}>COVID-19</Link></li>
+                        <li className="nav-item"><Link to="/contact" className="nav-links" onClick={closeMobileMenu}>Sign In</Link></li>
                     </ul>
                 </div>
             </nav>

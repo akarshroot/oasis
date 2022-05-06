@@ -1,34 +1,24 @@
 import './App.css'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import Home from './pages/Home'
+import Login from './pages/Login'
 
 
 function App() {
   const [isLoading, setLoading] = useState(true);
 
-  function fakeRequest() {
-    return new Promise(resolve => setTimeout(() => resolve(), 2000));
-  }
-
-  useEffect(() => {
-    fakeRequest().then(() => {
-      if (true) {
-        setLoading(!isLoading);
-      }
-    });
-  }, []);
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <Navbar/>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          {/* <Route path="/about" exact component={About} />
-          <Route path="/contact" exact component={Contact} /> */}
+          <Route path="/login" exact element={<Login/>}/>
+          {/* <Route path="/contact" exact component={Contact} /> */}
         </Routes>
         <Footer />
       </Router>
