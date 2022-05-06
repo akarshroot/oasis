@@ -82,3 +82,14 @@
     transition: color 1s;
     transition: border 1s;
   }
+
+  .user-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border-color: #4b71f0;
+}
+
+.dash-icon{
+    margin-right: 7px;
+}
