@@ -41,7 +41,67 @@
   }
 
   .feel{
-    color : black;
+    position : relative;
+    margin-top : 150px;
+    text-align : left;
+    margin-left : 50px;
+    font-size : 1.5rem;
+  }
+
+  .button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 25px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    /* display: inline-flex; */
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    /* overflow: hidden; */
+    padding-left: 16px;
+    padding-right: 16px;
+    position: absolute;
+    margin-left : -287px;
+    margin-top : 23px;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+
+  .parFlex{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nearby{
+    height : 100px;
+    width : 100px;
+    background-color: gray;
+    margin : 8px;
+    margin-top : 135px;
+    margin-left : 50px;
+  }
+
+  .heaStat{
+    height : 100px;
+    width : 100px;
+    background-color: gray;
+    margin : 8px;
+    margin-top : 135px;
+    margin-left : 50px;
   }
 
   .check{
