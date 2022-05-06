@@ -4,7 +4,7 @@ import Footer from './Footer'
 import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom'
 import React from 'react'
 import { useEffect, useState } from 'react'
-
+import Home from './pages/Home'
 
 
 function App() {
@@ -26,8 +26,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          {/* <Route path="/" exact component={Home} />
-          <Route path="/about" exact component={About} />
+          <Route path="/" exact element={<Home />} />
+          {/* <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} /> */}
         </Routes>
         <Footer />
