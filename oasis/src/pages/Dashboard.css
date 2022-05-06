@@ -94,6 +94,8 @@
     height : 150px;
     width : 205px;
     background-color: #1ea88ad0;
+    width : 200px;
+    background-color: gray;
     margin : 8px;
     margin-top : 125px;
     margin-left : 50px;
@@ -107,6 +109,8 @@
     height : 150px;
     width : 205px;
     background-color: #1ea88ad0;
+    width : 200px;
+    background-color: gray;
     margin : 8px;
     margin-top : 125px;
     margin-left : 50px;
@@ -164,4 +168,14 @@
 
 .dash-icon{
     margin-right: 7px;
+}
+
+.cal{
+    /* margin: 2px; */
+    padding: 2px;
+    border: none !important;
+}
+
+.image-div{
+    margin-bottom: 15px;
 }
