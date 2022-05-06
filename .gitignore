@@ -3,6 +3,7 @@
 # dependencies
 oasis/node_modules
 oasis/.pnp
+server/node_modules
 .pnp.js
 
 # testing

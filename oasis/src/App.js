@@ -1,23 +1,39 @@
-import './App.css';
+import './App.css'
+import Navbar from './Navbar'
+import Footer from './Footer'
+import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom'
+import React from 'react'
+import { useEffect, useState } from 'react'
+
+
 
 function App() {
+  const [isLoading, setLoading] = useState(true);
+
+  function fakeRequest() {
+    return new Promise(resolve => setTimeout(() => resolve(), 2000));
+  }
+
+  useEffect(() => {
+    fakeRequest().then(() => {
+      if (true) {
+        setLoading(!isLoading);
+      }
+    });
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Navbar />
+        <Routes>
+          {/* <Route path="/" exact component={Home} />
+          <Route path="/about" exact component={About} />
+          <Route path="/contact" exact component={Contact} /> */}
+        </Routes>
+        <Footer />
+      </Router>
     </div>
-  );
+  )
 }
 
 export default App;
