@@ -36,7 +36,7 @@ function Dashboard() {
          <span className = 'check'>Check out what's new since your last visit.</span> 
         </div>
         <div className = 'feel'>How are you feeling today?</div>
-        <button class="button-30" role="button">Log your mood<img className = 'btn-arrow' src={arrow}></img></button>
+        <button class="button-30" role="button" >Log your mood<img className = 'btn-arrow' src={arrow}></img></button>
         <div className = 'parFlex'>
           <div className = 'nearby'>
             Locate a nearby health center
