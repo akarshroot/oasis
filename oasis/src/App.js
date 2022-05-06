@@ -6,6 +6,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import Home from './pages/Home'
 import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/login" exact element={<Login/>}/>
-          {/* <Route path="/contact" exact component={Contact} /> */}
+          <Route path="/dashboard" exact element={<Dashboard/>} />
         </Routes>
         <Footer />
       </Router>
