@@ -41,9 +41,11 @@ function footer() {
                             </div>
                         </div>
                         <div className="item social">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                </a>
                             <a href="#" target="_blank" rel="noopener noreferrer"><img className="icon"></img></a>
                             <a href="#" target="_blank" rel="noopener noreferrer"><img className="icon"></img></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer"><img className="icon"></img></a>
+                        
                         </div>
                     </div>
                 </footer>
