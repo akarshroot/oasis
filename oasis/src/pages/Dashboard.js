@@ -18,8 +18,12 @@ function Dashboard() {
       </div>
 
       <div className="column right" style={{backgroundColor:"#ccc"}}>
-        <h2>Column 3</h2>
-        <p>Some text..</p>
+        <div>
+          <img></img>
+        </div>
+        <div>
+
+        </div>
       </div>
 
     </div>
