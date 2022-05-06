@@ -19,7 +19,7 @@ function Dashboard() {
          <b> Welcome to your dashboard!</b><br/>
          <span className = 'check'>Check out what's new since your last visit.</span> 
         </div>
-        
+        <div className = 'feel'>How are you feeling today?</div>
       </div>
 
       <div className="column right" style={{backgroundColor:"#ccc"}}>
