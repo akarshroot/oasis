@@ -1,0 +1,9 @@
+.faq-container{
+    padding: 20px 50px !important;
+    text-align: justify;
+}
+
+.row-content-text{
+    color: grey !important;
+    font-style: italic;
+}

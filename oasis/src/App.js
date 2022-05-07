@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import Signup from './pages/Signup'
+import FaqPage from './pages/FaqPage'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/login" exact element={<Login/>}/>
           <Route path="/signup" exact element={<Signup/>}/>
+          <Route path="/faq" exact element={<FaqPage/>}/>
           <Route path="/dashboard" exact element={<Dashboard/>} />
         </Routes>
         <Footer />
