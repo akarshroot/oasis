@@ -52,8 +52,11 @@ function Dashboard() {
          <b> Welcome to your dashboard!</b><br/>
          <span className = 'check'>Check out what's new since your last visit.</span> 
         </div>
-        <div className = 'feel'>How are you feeling today?</div>
-        <button class="button-30" role="button">Log your mood<img className = 'btn-arrow' src={arrow}></img></button>
+        <div className="outer">
+          <div className = 'feel'>How are you feeling today?</div>
+          <button class="button-30" role="button">Log your mood<img className = 'btn-arrow' src={arrow}></img></button>
+        </div>
+        
         <div className = 'parFlex'>
           <div className = 'nearby'>
            <div className = 'textN'><a className='text-link' href = '#'> Locate a nearby health center</a> </div>
