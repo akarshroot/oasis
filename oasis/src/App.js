@@ -13,6 +13,7 @@ import DashboardVacc from './pages/DashboardVacc'
 import DashboardHealth from './pages/DashboardHealth'
 import DashboardCovid from './pages/DashboardCovid'
 import Covid19 from './pages/Covid19'
+import HealthProfile from './pages/HealthProfile'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/dashboard/health" exact element={<DashboardVacc/>} />
           <Route path="/dashboard/covid" exact element={<DashboardCovid/>} />
           <Route path="/covid19" exact element={<Covid19/>} />
+          <Route path="/health-profile" exact element={<HealthProfile/>} />
         </Routes>
       </Router>
     </div>

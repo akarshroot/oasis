@@ -43,7 +43,7 @@ function DashboardVacc() {
         <div class = 'text'><a className = 'text-link' href = '#'>Current Status</a></div>
         </div>
         <div className = 'flex4'>
-        <div class = 'text'><a className = 'text-link' href = '#'>Update health profile</a></div>
+        <div class = 'text'><a className = 'text-link' href = '/health-profile'>Update health profile</a></div>
         </div>
       
       </div>
