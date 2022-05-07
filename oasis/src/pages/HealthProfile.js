@@ -20,7 +20,23 @@ import { useNavigate } from 'react-router-dom';
 
 function HealthProfile() {
     const [value, onChange] = useState(new Date());
+    const currentUser = useState()
     const navigate = useNavigate()
+    function handleQuestions() {
+        const data = {
+            uid: currentUser.uid,
+            q1: document.getElementById("q1").value,
+            q2: document.getElementById("q2").value,
+            q3: document.getElementById("q3").value,
+            q4: document.getElementById("q4").value,
+            q5: document.getElementById("q5").value,
+            q6: document.getElementById("q6").value,
+            q7: document.getElementById("q7").value,
+            q8: document.getElementById("q8").value,
+            q9: document.getElementById("q9").value,
+        }
+        fetch("/submit-assessment", data)
+    }
 
     return (
         <div className="dash-container">
@@ -44,10 +60,6 @@ function HealthProfile() {
                             <div class="input-group input-group-icon">
                                 <input type="email" placeholder="Email Adress" />
                                 <div class="input-icon"><i class="fa fa-envelope"></i></div>
-                            </div>
-                            <div class="input-group input-group-icon">
-                                <input type="password" placeholder="Password" />
-                                <div class="input-icon"><i class="fa fa-key"></i></div>
                             </div>
                         </div>
                         <div class="row">
@@ -75,34 +87,46 @@ function HealthProfile() {
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <h4>Payment Details</h4>
-                            <div class="input-group">
-                                <input id="payment-method-card" type="radio" name="payment-method" value="card" checked="true" />
-                                <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
-                                <input id="payment-method-paypal" type="radio" name="payment-method" value="paypal" />
-                                <label for="payment-method-paypal"> <span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
-                            </div>
-                            <div class="input-group input-group-icon">
-                                <input type="text" placeholder="Card Number" />
-                                <div class="input-icon"><i class="fa fa-credit-card"></i></div>
-                            </div>
-                            <div class="col-half">
-                                <div class="input-group input-group-icon">
-                                    <input type="text" placeholder="Card CVC" />
-                                    <div class="input-icon"><i class="fa fa-user"></i></div>
-                                </div>
-                            </div>
-                            <div class="col-half">
+                        <br />
+                        <div>Answer the below questions to help us assess your health.</div>
+                        <br />
+                        <div class="row" style={{ padding: "20px" }}>
+                            <div>
                                 <div class="input-group">
-                                    <select>
-                                        <option>01 Jan</option>
-                                        <option>02 Jan</option>
-                                    </select>
-                                    <select>
-                                        <option>2015</option>
-                                        <option>2016</option>
-                                    </select>
+                                    <label htmlFor="">Do you have access to clean and safe drinking water and food?</label>
+                                    <input id="q1" type="text" placeholder="Enter your answer here" />
+                                </div>
+                                <div class="input-group input-group-icon">
+                                    <label htmlFor="">Do you have access to clean and safe drinking water and food?</label>
+                                    <input id="q2" type="text" placeholder="Enter your answer here" />
+                                </div>
+                                <div class="input-group input-group-icon">
+                                    <label htmlFor="">Do you have any pr-existing health conditions or chronic disease?</label>
+                                    <input id="q3" type="text" placeholder="Enter your answer here" />
+                                </div>
+                                <div class="input-group input-group-icon">
+                                    <label htmlFor="">How healthy do you consider yourself on a scale of 1 to 10?</label>
+                                    <input id="q4" type="text" placeholder="Enter your answer here" />
+                                </div>
+                                <div class="input-group input-group-icon">
+                                    <label htmlFor="">Do you have any hereditary conditions/diseases?</label>
+                                    <input id="q5" type="text" placeholder="Enter your answer here" />
+                                </div>
+                                <div class="input-group input-group-icon">
+                                    <label htmlFor="">Do you have any allergies?</label>
+                                    <input id="q6" type="text" placeholder="Enter your answer here" />
+                                </div>
+                                <div class="input-group input-group-icon">
+                                    <label htmlFor="">Are you addicted to any substances?</label>
+                                    <input id="q7" type="text" placeholder="Enter your answer here" />
+                                </div>
+                                <div class="input-group input-group-icon">
+                                    <label htmlFor="">Have you ever been declared clinically depressed?</label>
+                                    <input id="q8" type="text" placeholder="Enter your answer here" />
+                                </div>
+                                <div class="input-group input-group-icon">
+                                    <label htmlFor="">How much sleep do you get on an average night?</label>
+                                    <input id="q9" type="text" placeholder="Enter your answer here" />
                                 </div>
                             </div>
                         </div>
@@ -112,6 +136,7 @@ function HealthProfile() {
                                 <input id="terms" type="checkbox" />
                                 <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
                             </div>
+                            <button onClick={handleQuestions} style={{marginTop: "100px", marginLeft: "40px", marginBottom: "100px"}} class="button-30" role="button">Get Started<img className='btn-arrow' src={arrow}></img></button>
                         </div>
                     </form>
                 </div>
