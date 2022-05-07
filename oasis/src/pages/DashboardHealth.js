@@ -52,6 +52,7 @@ function DashboardHealth() {
       <div className="column right" style={{backgroundColor:"white"}}>
         <div>
           <img src={userimg} alt="User image" className="user-img"></img> 
+          <h3>Test User 1</h3>
         </div>
         <div>
           <Calendar className="cal" onChange={onChange} value={value} />
