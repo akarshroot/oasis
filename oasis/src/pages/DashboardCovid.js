@@ -21,6 +21,14 @@ function DashboardCovid() {
   const [value, onChange] = useState(new Date());
   const navigate = useNavigate()
 
+  function getCertificate() {
+    const data = {
+      beneficiary_id: "1234567890"
+    }
+    fetch("/get-certificate", data)
+    
+  }
+
   return (
     <div className="dash-container">
 
