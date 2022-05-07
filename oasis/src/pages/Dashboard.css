@@ -11,7 +11,7 @@
   }
 
   .dash-container {
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   .dashbpic{
@@ -95,7 +95,6 @@
     width : 205px;
     background-color: #1ea88ad0;
     width : 200px;
-    background-color: gray;
     margin : 8px;
     margin-top : 125px;
     margin-left : 50px;
@@ -110,7 +109,6 @@
     width : 205px;
     background-color: #1ea88ad0;
     width : 200px;
-    background-color: gray;
     margin : 8px;
     margin-top : 125px;
     margin-left : 50px;
@@ -224,6 +222,7 @@
       text-align: left;
       margin: 20px 0px;
       padding: 15px 10px 15px 40px;
+      cursor: pointer;
       /* padding-right: 5px; */
   }
 
@@ -256,6 +255,7 @@
 
 .image-div{
     margin-bottom: 15px;
+    margin-top: -40px;
 }
 
 .mood-modal {

@@ -54,7 +54,7 @@ function DashboardHealth() {
           <img src={userimg} alt="User image" className="user-img"></img> 
         </div>
         <div>
-          <Calendar onChange={onChange} value={value} />
+          <Calendar className="cal" onChange={onChange} value={value} />
         </div>
       </div>
 

@@ -64,10 +64,10 @@ function Dashboard() {
         <button class="button-30" role="button" onClick={() => { setModalIsOpen(true); }} >Log your mood<img className='btn-arrow' src={arrow}></img></button>
         <div className='parFlex'>
           <div className='nearby'>
-            Locate a nearby health center
+          <div class = 'textN'><a className = 'text-link' href = '#'> Locate a nearby health center</a></div>
           </div>
           <div className='heaStat'>
-            Check your health status
+          <div class = 'textN'><a className = 'text-link' href = '#'> Check your health status</a></div>
           </div>
         </div>
 
