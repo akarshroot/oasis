@@ -1,0 +1,22 @@
+  .graph-frame{
+      margin: auto;
+  }
+
+  .cov-head{
+      text-align: justify;
+      font-size: 30px;
+      width: 70%;
+      padding: 5px 0px;
+      margin-top: 30px;
+      /* background-color: lightgrey; */
+  }
+
+  .cov-content{
+    text-align: justify;
+    color: grey;
+}
+
+.cov-div{
+    width: 70%;
+    margin: auto;
+}
