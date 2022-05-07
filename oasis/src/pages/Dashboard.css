@@ -247,6 +247,11 @@
     margin-right: 7px;
 }
 
+.btn{
+  position : relative;
+  margin-left : 30px;
+}
+
 .cal{
     /* margin: 2px; */
     padding: 2px;
@@ -280,4 +285,41 @@
   margin-left: 90%;
   background-color: transparent;
   border: none;
+}
+table {
+  position: relative;
+  margin-top : 45px;
+  margin-left : 17px;
+  width: 650px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 15px;
+  background-color: #48c4a9d0;
+  color: #fff;
+}
+th {
+  text-align: center;
+}
+thead th {
+  background-color: #24a2a7;
+}
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+  position: relative;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
 }
