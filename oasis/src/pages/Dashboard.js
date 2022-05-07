@@ -18,8 +18,24 @@ import arrow from '../assets/arrow.png'
 import { useNavigate } from 'react-router-dom';
 
 function Dashboard() {
+  function isSameDay(a, b) {
+    console.log(a);
+    console.log(b);
+    return a == b
+  }
   const [value, onChange] = useState(new Date());
   const navigate = useNavigate()
+  const datesToAddContentTo = [1, 12, 20];
+  function tileContent({ date, view }) {
+    // Add class to tiles in month view only
+    if (view === 'month') {
+      console.log();
+      // Check if a date React-Calendar wants to check is on the list of dates to add class to
+      if (datesToAddContentTo.find(dDate => isSameDay(dDate, date))) {
+        return 'My content';
+      }
+    }
+  }
 
   return (
     <div className="dash-container">
@@ -50,11 +66,11 @@ function Dashboard() {
       </div>
 
       <div className="column right" style={{backgroundColor:"white"}}>
-        <div>
+        <div className="image-div">
           <img src={userimg} alt="User image" className="user-img"></img> 
         </div>
         <div>
-          <Calendar onChange={onChange} value={value} />
+          <Calendar onChange={onChange} value={value} tileContent={tileContent} className="cal"/>
         </div>
       </div>
 
