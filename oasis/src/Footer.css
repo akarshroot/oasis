@@ -1,10 +1,8 @@
 .footer-container {
-    height: 200px;
     width: 100%;
     background-color: whitesmoke;
     color: black;
     text-align: center;
-    padding-top: 50px;
 }
 
 .icon {
@@ -42,7 +40,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 20px;
 }
 
 .item {
@@ -54,6 +51,7 @@
     color:white;
     background-color:#4b71f0;
     height: 200px;
+    overflow: hidden;
   }
   
   .footer-dark h3 {

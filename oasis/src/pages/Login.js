@@ -6,6 +6,7 @@ function Login() {
     const navigate = useNavigate()
     const currentUser = false
     const initUserLoading = false
+    const [loading, setLoading] = useState(false)
     useEffect(() => {
         if (currentUser) {
             window.location.replace("/dashboard")
@@ -40,6 +41,7 @@ function Login() {
     }
 
     function handleLogin() {
+        setLoading(true)
         const userData = {
             email: inputs.email,
             password: inputs.password
@@ -49,6 +51,7 @@ function Login() {
             .then((data) => {
                 console.log(data)
                 navigate("/dashboard")
+                setLoading(false)
             });
     }
 
@@ -113,7 +116,7 @@ function Login() {
                                     <p>Recovery Password</p>
                                 </div>
                                 <div className="btn">
-                                    <button type="submit">Sign in</button>
+                                    <button type="submit" disabled={loading}>{loading ? "Loading...":"Sign in"}</button>
                                 </div>
 
                             </form>
