@@ -41,6 +41,12 @@ function DashboardCovid() {
 
       <div className="column middle">
         <iframe src="" frameborder="0"></iframe>
+        <div className='covid-cards'>
+            <div className='covid-cert'>
+                <h3>Get your vaccination certificate</h3>
+                
+            </div>
+        </div>
       </div>
 
       <div className="column right" style={{ backgroundColor: "white" }}>
