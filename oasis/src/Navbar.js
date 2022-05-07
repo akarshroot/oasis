@@ -38,7 +38,7 @@ function Navbar() {
                         <li className="nav-item"><Link to="/" className="nav-links" onClick={closeMobileMenu}>Home</Link></li>
                         <li className="nav-item"><Link to="/faq" className="nav-links" onClick={closeMobileMenu}>FAQ</Link></li>
                         <li className="nav-item"><Link to="/covid19" className="nav-links" onClick={closeMobileMenu}>COVID-19</Link></li>
-                        <li className="nav-item"><Link to="/login" className="nav-links" onClick={closeMobileMenu}>{window.location.pathname == "/dashboard"? "Test User 1":"Sign In"}</Link></li>
+                        <li className="nav-item"><Link to="/login" className="nav-links" onClick={closeMobileMenu}>{window.location.pathname == "/dashboard" || window.location.pathname == "/dashboard/health" || window.location.pathname == "/dashboard/vaccine" || window.location.pathname == "/dashboard/covid" ? "Test User 1":"Sign In"}</Link></li>
                     </ul>
                 </div>
             </nav>

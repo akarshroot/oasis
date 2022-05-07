@@ -15,14 +15,11 @@ import { faMaskFace } from '@fortawesome/free-solid-svg-icons';
 import Calendar from 'react-calendar';
 import Modal from 'react-modal';
 import arrow from '../assets/arrow.png'
-<<<<<<< HEAD
 import depressed from '../assets/depressed.png'
 import dead from '../assets/dead.png'
 import happy from '../assets/happy.png'
 import excited from '../assets/excited.png'
-=======
 import { useNavigate } from 'react-router-dom';
->>>>>>> 96f61249a079648aaf996e08b03cf78e7ed6afd1
 
 function Dashboard() {
   function isSameDay(a, b) {
@@ -51,20 +48,11 @@ function Dashboard() {
   return (
     <div className="dash-container">
 
-<<<<<<< HEAD
-      <div className="column left" style={{ backgroundColor: "white" }}>
-        <div className="dash-tabs"><FontAwesomeIcon icon={faChartColumn} className="dash-icon" />Dashboard</div>
-        <div className="dash-tabs"><FontAwesomeIcon icon={faFolderOpen} className="dash-icon" />Health Status</div>
-        <div className="dash-tabs"><FontAwesomeIcon icon={faHouseMedicalCircleCheck} className="dash-icon" />Vaccination History</div>
-        <div className="dash-tabs"><FontAwesomeIcon icon={faHouseCircleExclamation} className="dash-icon" />Vaccination Due</div>
-        <div className="dash-tabs"><FontAwesomeIcon icon={faMaskFace} className="dash-icon" />COVID-19 Resources</div>
-=======
       <div className="column left" style={{backgroundColor: "white"}}>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard")}}><FontAwesomeIcon icon={ faChartColumn } className="dash-icon"/>Dashboard</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/health")}}><FontAwesomeIcon icon={ faFolderOpen } className="dash-icon"/>Health Status</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/vaccine")}}><FontAwesomeIcon icon={ faHouseMedicalCircleCheck } className="dash-icon"/>Vaccination History</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/covid")}}><FontAwesomeIcon icon={ faMaskFace } className="dash-icon"/>COVID-19 Resources</div>
->>>>>>> 96f61249a079648aaf996e08b03cf78e7ed6afd1
       </div>
 
       <div className="column middle">
@@ -72,7 +60,6 @@ function Dashboard() {
           <b> Welcome to your dashboard!</b><br />
           <span className='check'>Check out what's new since your last visit.</span>
         </div>
-<<<<<<< HEAD
         <div className='feel'>How are you feeling today?</div>
         <button class="button-30" role="button" onClick={() => { setModalIsOpen(true); }} >Log your mood<img className='btn-arrow' src={arrow}></img></button>
         <div className='parFlex'>
@@ -81,19 +68,6 @@ function Dashboard() {
           </div>
           <div className='heaStat'>
             Check your health status
-=======
-        <div className="outer">
-          <div className = 'feel'>How are you feeling today?</div>
-          <button class="button-30" role="button">Log your mood<img className = 'btn-arrow' src={arrow}></img></button>
-        </div>
-        
-        <div className = 'parFlex'>
-          <div className = 'nearby'>
-           <div className = 'textN'><a className='text-link' href = '#'> Locate a nearby health center</a> </div>
-          </div>
-          <div className = 'heaStat'>
-          <div className = 'textN'><a className='text-link' href = '#'> Check your health status</a></div>
->>>>>>> 96f61249a079648aaf996e08b03cf78e7ed6afd1
           </div>
         </div>
 
