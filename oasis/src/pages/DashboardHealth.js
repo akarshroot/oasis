@@ -17,7 +17,7 @@ import Calendar from 'react-calendar';
 import arrow from '../assets/arrow.png'
 import { useNavigate } from 'react-router-dom';
 
-function Dashboard() {
+function DashboardHealth() {
   const [value, onChange] = useState(new Date());
   const navigate = useNavigate()
 
@@ -25,7 +25,7 @@ function Dashboard() {
     <div className="dash-container">
 
       <div className="column left" style={{backgroundColor: "white"}}>
-        <div className="dash-tabs" onClick={() => {navigate("/dashboard")}}><FontAwesomeIcon icon={ faChartColumn } className="dash-icon"/>Dashboard</div>
+      <div className="dash-tabs" onClick={() => {navigate("/dashboard")}}><FontAwesomeIcon icon={ faChartColumn } className="dash-icon"/>Dashboard</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/health")}}><FontAwesomeIcon icon={ faFolderOpen } className="dash-icon"/>Health Status</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/vaccine")}}><FontAwesomeIcon icon={ faHouseMedicalCircleCheck } className="dash-icon"/>Vaccination History</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/covid")}}><FontAwesomeIcon icon={ faMaskFace } className="dash-icon"/>COVID-19 Resources</div>
@@ -40,10 +40,10 @@ function Dashboard() {
         <button class="button-30" role="button">Log your mood<img className = 'btn-arrow' src={arrow}></img></button>
         <div className = 'parFlex'>
           <div className = 'nearby'>
-           <div className = 'textN'><a className='text-link' href = '#'> Locate a nearby health center</a> </div>
+            Locate a nearby health center
           </div>
           <div className = 'heaStat'>
-          <div className = 'textN'><a className='text-link' href = '#'> Check your health status</a></div>
+            Check your health status
           </div>
         </div>
       
@@ -62,4 +62,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard
+export default DashboardHealth

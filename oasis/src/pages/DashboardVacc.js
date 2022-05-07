@@ -15,9 +15,10 @@ import Calendar from 'react-calendar';
 
 
 import arrow from '../assets/arrow.png'
+import Dashboard from './Dashboard';
 import { useNavigate } from 'react-router-dom';
 
-function Dashboard() {
+function DashboardVacc() {
   const [value, onChange] = useState(new Date());
   const navigate = useNavigate()
 
@@ -25,26 +26,24 @@ function Dashboard() {
     <div className="dash-container">
 
       <div className="column left" style={{backgroundColor: "white"}}>
-        <div className="dash-tabs" onClick={() => {navigate("/dashboard")}}><FontAwesomeIcon icon={ faChartColumn } className="dash-icon"/>Dashboard</div>
+      <div className="dash-tabs" onClick={() => {navigate("/dashboard")}}><FontAwesomeIcon icon={ faChartColumn } className="dash-icon"/>Dashboard</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/health")}}><FontAwesomeIcon icon={ faFolderOpen } className="dash-icon"/>Health Status</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/vaccine")}}><FontAwesomeIcon icon={ faHouseMedicalCircleCheck } className="dash-icon"/>Vaccination History</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/covid")}}><FontAwesomeIcon icon={ faMaskFace } className="dash-icon"/>COVID-19 Resources</div>
       </div>
 
-      <div className="column middle">
-        <div className = 'dash-wel'>
-         <b> Welcome to your dashboard!</b><br/>
-         <span className = 'check'>Check out what's new since your last visit.</span> 
+      <div className="column middle mid">
+        <div className = 'flex1'>
+            <div class = 'text'><a className = 'text-link' href = '#'>Last Checkup</a></div>
         </div>
-        <div className = 'feel'>How are you feeling today?</div>
-        <button class="button-30" role="button">Log your mood<img className = 'btn-arrow' src={arrow}></img></button>
-        <div className = 'parFlex'>
-          <div className = 'nearby'>
-           <div className = 'textN'><a className='text-link' href = '#'> Locate a nearby health center</a> </div>
-          </div>
-          <div className = 'heaStat'>
-          <div className = 'textN'><a className='text-link' href = '#'> Check your health status</a></div>
-          </div>
+        <div className = 'flex2'>
+        <div class = 'textN'><a className = 'text-link' href = '#'>Recommended Checkup</a></div>
+        </div>
+        <div className = 'flex3'>
+        <div class = 'text'><a className = 'text-link' href = '#'>Current Status</a></div>
+        </div>
+        <div className = 'flex4'>
+        <div class = 'text'><a className = 'text-link' href = '#'>Update health profile</a></div>
         </div>
       
       </div>
@@ -62,4 +61,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard
+export default DashboardVacc

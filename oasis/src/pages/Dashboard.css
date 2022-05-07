@@ -119,6 +119,84 @@
   .check{
     font-size: 20px;
   }
+
+  .mid{
+    display : flex;
+    flex-direction : row;
+    flex-wrap: wrap;
+  }
+
+  .textN{
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .flex1{
+    height : 150px;
+    width : 205px;
+    background-color: #1ea88ad0;
+    margin : 8px;
+    margin-top : 50px;
+    margin-left : 100px;
+    font-size : 1.25rem;
+    border-radius : 20px;
+    padding : 4px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    
+  }
+
+  .flex2{
+    height : 150px;
+    width : 205px;
+    background-color: #1ea88ad0;
+    margin : 8px;
+    margin-top : 50px;
+    margin-left : 50px;
+    font-size : 1.25rem;
+    border-radius : 20px;
+    padding : 4px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+
+  .flex3{
+    height : 150px;
+    width : 205px;
+    background-color: #1ea88ad0;
+    margin : 8px;
+    margin-top : 40px;
+    margin-left : 100px;
+    font-size : 1.25rem;
+    border-radius : 20px;
+    padding : 4px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+
+  .flex4{
+    height : 150px;
+    width : 205px;
+    background-color: #1ea88ad0;
+    margin : 8px;
+    margin-top : 40px;
+    margin-left : 50px;
+    font-size : 1.25rem;
+    border-radius : 20px;
+    padding : 4px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+
+  .text-link{
+    text-decoration : none;
+    color : black;
+  }
+
+  .text-link:hover{
+    color : white;
+  }
+
+  .text{
+    position : relative;
+    margin-top : 55px;
+  }
   
   .left, .right {
     width: 25%;
