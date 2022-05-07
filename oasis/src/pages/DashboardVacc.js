@@ -15,62 +15,45 @@ import Calendar from 'react-calendar';
 
 
 import arrow from '../assets/arrow.png'
+import Dashboard from './Dashboard';
 import { useNavigate } from 'react-router-dom';
 
-function Dashboard() {
-  function isSameDay(a, b) {
-    console.log(a);
-    console.log(b);
-    return a == b
-  }
+function DashboardVacc() {
   const [value, onChange] = useState(new Date());
   const navigate = useNavigate()
-  const datesToAddContentTo = [1, 12, 20];
-  function tileContent({ date, view }) {
-    // Add class to tiles in month view only
-    if (view === 'month') {
-      console.log();
-      // Check if a date React-Calendar wants to check is on the list of dates to add class to
-      if (datesToAddContentTo.find(dDate => isSameDay(dDate, date))) {
-        return 'My content';
-      }
-    }
-  }
 
   return (
     <div className="dash-container">
 
       <div className="column left" style={{backgroundColor: "white"}}>
-        <div className="dash-tabs" onClick={() => {navigate("/dashboard")}}><FontAwesomeIcon icon={ faChartColumn } className="dash-icon"/>Dashboard</div>
+      <div className="dash-tabs" onClick={() => {navigate("/dashboard")}}><FontAwesomeIcon icon={ faChartColumn } className="dash-icon"/>Dashboard</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/health")}}><FontAwesomeIcon icon={ faFolderOpen } className="dash-icon"/>Health Status</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/vaccine")}}><FontAwesomeIcon icon={ faHouseMedicalCircleCheck } className="dash-icon"/>Vaccination History</div>
         <div className="dash-tabs" onClick={() => {navigate("/dashboard/covid")}}><FontAwesomeIcon icon={ faMaskFace } className="dash-icon"/>COVID-19 Resources</div>
       </div>
 
-      <div className="column middle">
-        <div className = 'dash-wel'>
-         <b> Welcome to your dashboard!</b><br/>
-         <span className = 'check'>Check out what's new since your last visit.</span> 
+      <div className="column middle mid">
+        <div className = 'flex1'>
+            <div class = 'text'><a className = 'text-link' href = '#'>Last Checkup</a></div>
         </div>
-        <div className = 'feel'>How are you feeling today?</div>
-        <button class="button-30" role="button">Log your mood<img className = 'btn-arrow' src={arrow}></img></button>
-        <div className = 'parFlex'>
-          <div className = 'nearby'>
-           <div className = 'textN'><a className='text-link' href = '#'> Locate a nearby health center</a> </div>
-          </div>
-          <div className = 'heaStat'>
-          <div className = 'textN'><a className='text-link' href = '#'> Check your health status</a></div>
-          </div>
+        <div className = 'flex2'>
+        <div class = 'textN'><a className = 'text-link' href = '#'>Recommended Checkup</a></div>
+        </div>
+        <div className = 'flex3'>
+        <div class = 'text'><a className = 'text-link' href = '#'>Current Status</a></div>
+        </div>
+        <div className = 'flex4'>
+        <div class = 'text'><a className = 'text-link' href = '#'>Update health profile</a></div>
         </div>
       
       </div>
 
       <div className="column right" style={{backgroundColor:"white"}}>
-        <div className="image-div">
+        <div>
           <img src={userimg} alt="User image" className="user-img"></img> 
         </div>
         <div>
-          <Calendar onChange={onChange} value={value} tileContent={tileContent} className="cal"/>
+          <Calendar onChange={onChange} value={value} />
         </div>
       </div>
 
@@ -78,4 +61,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard
+export default DashboardVacc

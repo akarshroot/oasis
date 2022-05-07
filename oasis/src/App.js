@@ -8,6 +8,9 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import Signup from './pages/Signup'
+import DashboardVacc from './pages/DashboardVacc'
+import DashboardHealth from './pages/DashboardHealth'
+import DashboardCovid from './pages/DashboardCovid'
 
 
 function App() {
@@ -22,6 +25,9 @@ function App() {
           <Route path="/login" exact element={<Login/>}/>
           <Route path="/signup" exact element={<Signup/>}/>
           <Route path="/dashboard" exact element={<Dashboard/>} />
+          <Route path="/dashboard/vaccine" exact element={<DashboardHealth/>} />
+          <Route path="/dashboard/health" exact element={<DashboardVacc/>} />
+          <Route path="/dashboard/covid" exact element={<DashboardCovid/>} />
         </Routes>
         <Footer />
       </Router>
