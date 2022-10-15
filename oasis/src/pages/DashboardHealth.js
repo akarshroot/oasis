@@ -32,29 +32,52 @@ function DashboardHealth() {
       </div>
 
       <div className="column middle">
-        <div className = 'dash-wel'>
-         <b> Welcome to your dashboard!</b><br/>
-         <span className = 'check'>Check out what's new since your last visit.</span> 
-        </div>
-        <div className = 'feel'>How are you feeling today?</div>
-        <button class="button-30" role="button">Log your mood<img className = 'btn-arrow' src={arrow}></img></button>
-        <div className = 'parFlex'>
-          <div className = 'nearby'>
-            Locate a nearby health center
-          </div>
-          <div className = 'heaStat'>
-            Check your health status
-          </div>
-        </div>
-      
+      <table>
+		<thead>
+			<tr>
+				<th>S. No.</th>
+				<th>Vaccine</th>
+				<th>Next Appointment</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>COVID</td>
+				<td>10-May-22</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Hepatitis A</td>
+				<td>05-Jun-22</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Hepatitis B</td>
+				<td>10-Jun-22</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>IPV</td>
+				<td>20-Jun-22</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>MMR</td>
+				<td>30-Jun-22</td>
+			</tr>
+		</tbody>
+	</table>
+    <button class="button-30 btn" role="button">Update appointments</button>
       </div>
 
       <div className="column right" style={{backgroundColor:"white"}}>
         <div>
           <img src={userimg} alt="User image" className="user-img"></img> 
+          <h3>Test User 1</h3>
         </div>
         <div>
-          <Calendar onChange={onChange} value={value} />
+          <Calendar className="cal" onChange={onChange} value={value} />
         </div>
       </div>
 

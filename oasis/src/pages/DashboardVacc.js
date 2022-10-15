@@ -43,7 +43,7 @@ function DashboardVacc() {
         <div class = 'text'><a className = 'text-link' href = '#'>Current Status</a></div>
         </div>
         <div className = 'flex4'>
-        <div class = 'text'><a className = 'text-link' href = '#'>Update health profile</a></div>
+        <div class = 'text'><a className = 'text-link' href = '/health-profile'>Update health profile</a></div>
         </div>
       
       </div>
@@ -51,9 +51,10 @@ function DashboardVacc() {
       <div className="column right" style={{backgroundColor:"white"}}>
         <div>
           <img src={userimg} alt="User image" className="user-img"></img> 
+          <h3>Test User 1</h3>
         </div>
         <div>
-          <Calendar onChange={onChange} value={value} />
+          <Calendar className="cal" onChange={onChange} value={value} />
         </div>
       </div>
 

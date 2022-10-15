@@ -23,8 +23,6 @@ import { useNavigate } from 'react-router-dom';
 
 function Dashboard() {
   function isSameDay(a, b) {
-    console.log(a);
-    console.log(b);
     return a == b
   }
 
@@ -37,7 +35,6 @@ function Dashboard() {
   function tileContent({ date, view }) {
     // Add class to tiles in month view only
     if (view === 'month') {
-      console.log();
       // Check if a date React-Calendar wants to check is on the list of dates to add class to
       if (datesToAddContentTo.find(dDate => isSameDay(dDate, date))) {
         return 'My content';
@@ -64,10 +61,10 @@ function Dashboard() {
         <button class="button-30" role="button" onClick={() => { setModalIsOpen(true); }} >Log your mood<img className='btn-arrow' src={arrow}></img></button>
         <div className='parFlex'>
           <div className='nearby'>
-            Locate a nearby health center
+          <div class = 'textN'><a className = 'text-link' href = '#'> Locate a nearby health center</a></div>
           </div>
           <div className='heaStat'>
-            Check your health status
+          <div class = 'textN'><a className = 'text-link' href = '#'> Check your health status</a></div>
           </div>
         </div>
 
